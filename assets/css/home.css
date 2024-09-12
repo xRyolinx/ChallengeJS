@@ -1,0 +1,115 @@
+#main {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+#title {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#prod-list {
+    display: grid;
+    column-gap: 3rem;
+    row-gap: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    background-color: #eeeeee;
+    padding: 20px 20px;
+}
+@media(min-width: 1000px) {
+#prod-list {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+}
+/* grid gap-y-[3rem] gap-x-[1rem]
+            justify-center
+            grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-5
+            lg:gap-x-[1.5rem] lg:gap-y-[3.5rem]
+            
+             */
+
+.prod-card {
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    width: 100%;
+    aspect-ratio: 3/4;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 2px solid rgb(200, 162, 162);
+    padding: 5px;
+}
+/* flex flex-col w-full aspect-[3/4] mx-auto cursor-pointer */
+
+.prod-img-container {
+    height: 80%;
+    overflow: hidden;
+}
+/* h-[80%] truncate */
+
+.prod-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: scale 0.7s;
+}
+.prod-img:hover {
+    scale: 1.25;
+}
+/* h-full w-full object-cover hover:scale-125 */
+
+.prod-text-container {
+    padding-top: 5px;
+    font-size: 10px;
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* t-[10px] h-[105px] lg:h-[110px] flex flex-col justify-between */
+
+
+.prod-category {
+    font-size: 15px;
+    font-weight: normal;
+    color: slategray;
+    margin: 0;
+    margin-bottom: 5px
+}
+/* text-[15px] font-normal text-slate-500
+                        m-0 lg:text-[16px] */
+
+
+.prod-title {
+    margin: 0;
+    font-size: 18px;
+    line-height: 22px;
+}
+/* -0 text-[17px] leading-[22px]
+                        lg:text-[18px] */
+
+
+.prod-price-container {
+    margin: 0;
+    font-size: 18px;
+}
+/* -0 text-[18px]
+                    lg:text-[18px] */
+
+
+
+button {
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+}

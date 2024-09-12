@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "img": "/assets/img/imgCarousel_1.jpg",
+      "category": "Premium",
+      "title": "Bougies Personnalisées",
+      "price": "3000"
+    },
+    {
+      "id": "2",
+      "img": "/assets/img/imgCarousel_2.jpg",
+      "category": "Evenement",
+      "title": "Bougies Ramadan",
+      "price": 2500
+    },
+    {
+      "id": "3",
+      "img": "/assets/img/imgCarousel_3.jpg",
+      "category": "Classique",
+      "title": "Bougies Parfumées",
+      "price": "2800"
+    },
+    {
+      "id": "4",
+      "img": "/assets/img/imgCarousel_1.jpg",
+      "category": "Premium",
+      "title": "Bougies Personnalisées",
+      "price": "3000"
+    },
+    {
+      "id": "5",
+      "img": "/assets/img/imgCarousel_2.jpg",
+      "category": "Evenement",
+      "title": "Bougies Ramadan",
+      "price": 2500
+    },
+    {
+      "id": "6",
+      "img": "/assets/img/imgCarousel_3.jpg",
+      "category": "Classique",
+      "title": "Bougies Parfumées",
+      "price": "2800"
+    },
+    {
+      "id": "7",
+      "img": "/assets/img/imgCarousel_1.jpg",
+      "category": "Premium",
+      "title": "Bougies Personnalisées",
+      "price": "3000"
+    },
+    {
+      "id": "8",
+      "img": "/assets/img/imgCarousel_2.jpg",
+      "category": "Evenement",
+      "title": "Bougies Ramadan",
+      "price": 2500
+    },
+    {
+      "id": "9",
+      "img": "/assets/img/imgCarousel_3.jpg",
+      "category": "Classique",
+      "title": "Bougies Parfumées",
+      "price": "2800"
+    },
+    {
+      "id": "10",
+      "img": "/assets/img/imgCarousel_1.jpg",
+      "category": "Premium",
+      "title": "Bougies Personnalisées",
+      "price": "3000"
+    },
+    {
+      "id": "11",
+      "img": "/assets/img/imgCarousel_2.jpg",
+      "category": "Evenement",
+      "title": "Bougies Ramadan",
+      "price": 2500
+    },
+    {
+      "id": "12",
+      "img": "/assets/img/imgCarousel_3.jpg",
+      "category": "Classique",
+      "title": "Bougies Parfumées",
+      "price": "2800"
+    }
+  ]
+}
