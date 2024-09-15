@@ -17,11 +17,11 @@ const Section = (produit) => {
     <div class="info">
         <div>
             <a href="/">Go Home</a>
-            <h2>Title: __TITRE_HERE__</h2>
+            <h2>Title: ${produit.title}</h2>
         </div>
-        <img src="__IMG_HERE__" alt="">
-        <p>Category: <b>__CATEGORY_HERE__</b></p>
-        <p>Price: <b>__PRICE_HERE__ DA</b></p>
+        <img src="${produit.img}" alt="">
+        <p>Category: <b>${produit.category}</b></p>
+        <p>Price: <b>${produit.price} DA</b></p>
 
         <div id='buttons'>
             <button id='edit'>Edit</button>
