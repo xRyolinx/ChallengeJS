@@ -1,25 +1,32 @@
-// import what you need
-
-
+import { createProduct } from "../../helper/fetchProd.js";
+import { navigate } from "../../helper/utils.js";
 
 // start
 document.addEventListener('DOMContentLoaded', () => {
     // add event to save button
     const addButton = document.querySelector('#addButton')
     addButton.addEventListener('click', (e)=>{
-        e.preventDefault() // empeche le formulaire de s'envoyer, afin que vous le manipuliez comme VOUS voulez (via handleAdd)
+        e.preventDefault()
         handleAdd()
     })
 })
 
 
 
-// when clicked on add button
-// create an object with all the inputs' value there, then send Post request !
-// if an error occured, print it to console
-// Finally (gg li fahmo), go to homePage wether an error occured or not ! (check la doc to see how)
+// when click on add button
 const handleAdd = () => {
-    alert('add button clicked!')
+    // alert('add button clicked!')
     // TO DO
-
+    let newProd = {};
+    document.querySelectorAll('input').forEach((element)=>{
+        newProd[element.name] = element.value
+    })
+    
+    createProduct(newProd)
+    .catch(()=>{
+        alert('An error occured. Please check the server')
+    })
+    .finally(()=>{
+        navigate('/')
+    })
 }

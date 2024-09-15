@@ -1,4 +1,4 @@
-// import what you need
+import { fetchProduct, deleteProduct } from "../helper/fetchProd.js"
 import { getIdFromUrl, changeTitle, navigate } from "../helper/utils.js"
 
 
@@ -35,11 +35,11 @@ const Section = (produit) => {
 
 // get edit button fron the section
 const getEditButton = (section) => {
-    return section.children[4].children[0] //go to section, then get the 5 child (div id=buttons), then its first child (edit button)
+    return section.children[4].children[0]
 }
 // get delete button fron the section
 const getDeleteButton = (section) => {
-    return section.children[4].children[1] //go to section, then get the 5 child (div id=buttons), then its second child (edit button)
+    return section.children[4].children[1]
 }
 
 
@@ -50,15 +50,35 @@ const handleEdit = () => {
 
 // on click handle of delete button
 const handleDelete = () => {
-    alert('Delete button clicked!')
+    // alert('Delete button clicked!')
 
-    // TO DO | hint: send del request !
-
+    // a faire
+    deleteProduct(id)
+    .then(()=>{
+        navigate(`/`)
+    })
 }
 
 
 // start
 document.addEventListener('DOMContentLoaded', ()=>{
-    // fetch, then create section, link buttons with handlers, then add to DOM
-    
+    // fetch and show infos
+    fetchProduct(id)
+    .then((data) => {
+        // change title
+        changeTitle(data.title)
+
+        // load section
+        const info = Section(data)
+
+        // load event listeners in buttons
+        const editButton = getEditButton(info)
+        editButton.addEventListener('click', handleEdit)
+        
+        const deleteButton = getDeleteButton(info)
+        deleteButton.addEventListener('click', handleDelete)
+
+        // add section to DOM
+        document.querySelector('#main').append(info)
+    })
 })
